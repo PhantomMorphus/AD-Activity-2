@@ -1,0 +1,167 @@
+/* Import Orbitron font for a techy look */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+/* Animated background with GIF wallpaper */
+body {
+    /* Remove the background property here */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    color: #e0e6ed;
+    position: relative;
+    overflow-x: hidden;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: radial-gradient(ellipse at 70% 20%, #00eaff33 0%, transparent 70%),
+                radial-gradient(ellipse at 20% 80%, #2196f322 0%, transparent 70%),
+                linear-gradient(120deg, #23272b 0%, #181c20 100%);
+    animation: bgmove 12s linear infinite alternate;
+    pointer-events: none;
+}
+@keyframes bgmove {
+    0% { background-position: 70% 20%, 20% 80%; }
+    100% { background-position: 60% 30%, 30% 70%; }
+}
+
+/* Layering for content */
+header, main, footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2.5rem 0 1.5rem 0;
+    background: rgba(24,28,32,0.85);
+    box-shadow: 0 4px 24px #000a;
+    border-bottom: 2px solid #00eaff;
+}
+header h1 {
+    font-size: 2.7rem;
+    color: #00eaff;
+    letter-spacing: 3px;
+    margin: 0;
+    text-shadow: 0 0 12px #00eaff88, 0 2px 8px #000;
+}
+
+/* Main intro section */
+.intro-section {
+    max-width: 720px;
+    margin: 2.5rem auto 0 auto;
+    text-align: center;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    background: rgba(35, 39, 43, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px #000a;
+    border: 1.5px solid #00eaff55;
+    position: relative;
+    overflow: hidden;
+}
+.intro-section::after {
+    content: "";
+    position: absolute;
+    top: -40px; left: -40px; right: -40px; bottom: -40px;
+    background: repeating-linear-gradient(
+        120deg,
+        transparent,
+        transparent 18px,
+        #00eaff11 22px,
+        transparent 26px
+    );
+    pointer-events: none;
+    z-index: 0;
+    animation: scanlines 8s linear infinite;
+}
+@keyframes scanlines {
+    0% { background-position: 0 0; }
+    100% { background-position: 120px 60px; }
+}
+.intro-section h2 {
+    color: #00eaff;
+    font-size: 2.1rem;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 0 8px #00eaff55;
+    position: relative;
+    z-index: 1;
+}
+.intro-section p {
+    color: #bfc9d1;
+    font-size: 1.15rem;
+    margin-bottom: 2.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Faction buttons in footer */
+footer.faction-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.7rem;
+    background: rgba(35, 39, 43, 0.98);
+    padding: 1.7rem 0 1.2rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 18px #000a;
+    z-index: 10;
+    border-top: 2px solid #00eaff;
+}
+footer.faction-buttons a {
+    background: #181c20;
+    color: #00eaff;
+    padding: 0.85rem 2.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 1.13rem;
+    border: 2px solid #00eaff;
+    box-shadow: 0 2px 12px #0006;
+    transition: 
+        background 0.2s, 
+        color 0.2s, 
+        border 0.2s,
+        box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+footer.faction-buttons a:hover {
+    background: #00eaff;
+    color: #181c20;
+    border: 2px solid #fff;
+    box-shadow: 0 0 18px #00eaff88, 0 2px 12px #0006;
+    text-shadow: 0 0 8px #fff;
+}
+
+/* Dynamic background class (for JavaScript control) */
+.dynamic-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: #10131a center center/cover no-repeat;
+    transition: background-image 1s ease;
+    pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .intro-section {
+        padding: 1.2rem 0.5rem;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    footer.faction-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem 0.5rem;
+    }
+}

@@ -1,0 +1,214 @@
+/* Body background: deep black with a subtle blue glow and a logo overlay */
+body {
+    background: #0a0d12;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    color: #e0e6ed;
+    overflow-x: hidden;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(circle at 60% 20%, #00eaff22 0%, transparent 60%),
+        radial-gradient(circle at 20% 80%, #00eaff11 0%, transparent 70%),
+        linear-gradient(120deg, #10131a 0%, #181c20 100%);
+    pointer-events: none;
+}
+body::after {
+    content: "";
+    position:fixed;
+    top: 50px; left: 50%; transform: translateX(-50%);
+    width: 1920px; height: 1080px;
+    background: url('../img/ArquebusLogo.webp') center center/contain no-repeat;
+    opacity: 0.08;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Main AC showcase container */
+.ac-container {
+    position: relative;
+    z-index: 1;
+    margin: 4rem auto 2rem auto;
+    max-width: 420px;
+    width: 95vw;
+    background: rgba(24, 28, 32, 0.10); /* More transparent for logo visibility */
+    border-radius: 28px;
+    box-shadow: 0 8px 48px #00eaff33, 0 2px 24px #000a;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    border: 2.5px solid #00eaff33;
+    overflow: visible;
+    transition: box-shadow 0.3s;
+}
+
+
+
+/* AC Image styling */
+.ac-image {
+    width: 340px;
+    height: 340px;
+    background: linear-gradient(135deg, #10131a 70%, #00eaff22 100%);
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 48px #00eaff55, 0 2px 32px #000a;
+    margin-bottom: 2.2rem;
+    position: relative;
+    z-index: 1;
+    border: 2.5px solid #00eaff99;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+.ac-image img {
+    width: 98%;
+    height: 98%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 32px #00eaff55) drop-shadow(0 2px 12px #000a);
+    transition: transform 0.3s;
+}
+
+/* Info section */
+.ac-info {
+    width: 100%;
+    color: #e0e6ed;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 0.5rem;
+}
+.ac-info h2 {
+    color: #00eaff;
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 16px #00eaff55, 0 2px 8px #000a;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+}
+.ac-info h3 {
+    color: #bfc9d1;
+    margin-bottom: 1.1rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px #00eaff33;
+    display: none; /* Hide AC name if you want only pilot name and desc */
+}
+.ac-info p {
+    color: #bfc9d1;
+    font-size: 1.13rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+    text-shadow: 0 0 8px #00eaff22;
+    background: rgba(0, 234, 255, 0.04);
+    border-radius: 10px;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+/* Cycle buttons */
+.cycle-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #10131a 60%, #00eaff33 100%);
+    color: #00eaff;
+    border: 2.5px solid #00eaff;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+    z-index: 2;
+    box-shadow: 0 0 18px #00eaff44, 0 2px 12px #0006;
+    outline: none;
+    filter: drop-shadow(0 0 8px #00eaff44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cycle-btn.prev { left: -70px; }
+.cycle-btn.next { right: -70px; }
+.cycle-btn:hover {
+    background: #00eaff;
+    color: #181c20;
+    border: 2.5px solid #fff;
+    box-shadow: 0 0 24px #00eaff99, 0 2px 12px #0006;
+}
+
+/* Faction nav */
+nav.faction-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background: rgba(35, 39, 43, 0.98);
+    padding: 1.2rem 0;
+    border-bottom: 2px solid #00eaff;
+    z-index: 2;
+    position: relative;
+}
+nav.faction-nav a {
+    background: #181c20;
+    color: #00eaff;
+    padding: 0.7rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+    border: 2px solid #00eaff;
+    box-shadow: 0 2px 12px #0006;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+nav.faction-nav a:hover {
+    background: #00eaff;
+    color: #181c20;
+    border: 2px solid #fff;
+}
+
+/* Footer and Home Button */
+footer {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    z-index: 2;
+    position: relative;
+}
+.home-btn {
+    background: #181c20;
+    color: #00eaff;
+    padding: 0.8rem 2.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 1.13rem;
+    border: 2px solid #00eaff;
+    box-shadow: 0 2px 12px #0006;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    display: inline-block;
+    margin-top: 2rem;
+}
+.home-btn:hover {
+    background: #00eaff;
+    color: #181c20;
+    border: 2px solid #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .ac-container { max-width: 98vw; padding: 1.2rem 0.2rem; }
+    .ac-image { width: 98vw; height: 180px; }
+    .cycle-btn.prev, .cycle-btn.next { left: 10px; right: 10px; top: unset; bottom: -60px; transform: none; }
+    .cycle-btn { width: 40px; height: 40px; font-size: 1.3rem; }
+    .ac-info h2 { font-size: 1.3rem; }
+}
