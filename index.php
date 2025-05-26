@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="dynamic-bg"></div>
-    <script src="assets/js/dynamicBG.js"></script>
+    <script src="page/assets/js/dynamicBG.js"></script>
     <header>
         <h1>Armored Core 6: All Armored Cores</h1>
     </header>
@@ -23,10 +23,10 @@
 
     </main>
     <footer class="faction-buttons">
-        <a href="balam.php">Balam</a>
-        <a href="arquebus.php">Arquebus</a>
-        <a href="rubicon.php">Rubicon Liberation Front</a>
-        <a href="rad.php">RaD</a>
+        <a href="page/balam.php">Balam</a>
+        <a href="page/arquebus.php">Arquebus</a>
+        <a href="page/rubicon.php">Rubicon Liberation Front</a>
+        <a href="page/rad.php">RaD</a>
     </footer>
 </body>
 </html>

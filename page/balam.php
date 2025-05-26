@@ -105,7 +105,7 @@
         <?php renderACShowcase($pilots[0]); ?>
     </main>
     <footer>
-        <a href="./index.php" class="home-btn">Back to Home</a>
+        <a href="../index.php" class="home-btn">Back to Home</a>
     </footer>
     <script>
     const pilots = <?php echo json_encode($pilots); ?>;
