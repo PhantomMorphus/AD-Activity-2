@@ -23,7 +23,7 @@
 
 ![](https://visit-counter.vercel.app/counter.png?page=PhantomMorphus/AD-Activity-1)
 
-[![wakatime](https://wakatime.com/badge/user/018ee6e8-9dc3-4d05-aa6a-529869d42a97/project/8a64f338-8135-45e2-813c-284fbbe8d53d.svg)]
+[![wakatime](https://wakatime.com/badge/user/018ee6e8-9dc3-4d05-aa6a-529869d42a97/project/6f11fc72-4c08-4862-ae1c-6dc408c42c1e.svg)]
 
 ---
 
