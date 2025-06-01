@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="dynamic-bg"></div>
-    <script src="page/assets/js/dynamicBG.js"></script>
+    <script src="assets/js/dynamicBG.js"></script>
     <header>
         <h1>Armored Core 6: All Armored Cores</h1>
     </header>
