@@ -6,7 +6,7 @@
 <div align="center">
   <a href="https://github.com/PhantomMorphus/">
   <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/num1.png" alt="Nyebe" width="130" height="100">
+    <img src="./assets/img/AC.jpg" alt="Nyebe" width="130" height="100">
   </a>
 <!-- TODO: Change Title to the name of the title of your Project -->
   <h3 align="center">AD-Activity-2</h3>
